@@ -81,8 +81,6 @@ body {
 
 /* Home Page */
 
-.current-event {
-}
 
 .film-freeway-button {
   margin: 3em auto;
@@ -134,12 +132,14 @@ body {
 
 /* Slideshow */
 
+
+
+
 .slideshow-container {
   height: 30em;
   width: 95vw;
   display: flex;
   margin: 0 auto;
-  background-color: #191919;
 }
 
 
@@ -159,11 +159,12 @@ body {
 .slideshow-button {
   width: 5vw;
   border-radius: 15px;
-  height: 5vh;
-  margin: auto 0;
+  border-width: 1px;
   color: white;
-  background-color: transparent;
   border: none;
+  background-color: #191919;
+  height: 5em;
+  margin: auto;
 }
 
 .slideshow-button > svg {
@@ -174,16 +175,14 @@ body {
   display: inline-flex;
   width: 100%;
   overflow: hidden;
+  justify-content: space-around;
 }
 
 
 .slideshow-card {
-  height: 100%;
   width: 47%;
-  margin: auto 4vw;
   display: flex;
-  border: solid black 2px;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 
@@ -194,6 +193,7 @@ body {
 
 .card-image {
   max-height: 100%;
+  max-width: 100%;
 }
 
 .card-description {
@@ -228,6 +228,7 @@ body {
   flex-direction: column;
   margin: auto;
   border: none;
+  max-width: 50%;
 }
 
 .previous-events {
@@ -249,6 +250,8 @@ body {
   font-size: 1.5em;
   margin: 2em;
 }
+
+
 
 /* Services page */
 
@@ -278,6 +281,65 @@ body {
   height: 5em;
   padding: .5em;
 }
+
+/* Projects page */
+
+
+
+.projects-wrapper {
+  height: auto;
+  background-color: #191919;
+  text-align: center;
+}
+
+
+.project-logo-wrapper {
+  width: 100vw;
+}
+
+
+.projects-logo {
+  padding: auto;
+}
+
+.upcoming-projects {
+  margin: 5vh auto;
+  
+}
+
+.upcoming-projects > h1 {
+  text-align: auto;
+}
+
+.current-project {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  border: none;
+
+}
+
+.previous-projects {
+  height: auto;
+  text-align: center;
+  margin: 10vh auto;
+}
+
+.vertical-card-wrapper {
+  margin: 5vh auto;
+}
+
+.horizontal-card-wrapper {
+  margin-top: 5vh;
+}
+
+.project-description {
+  text-align: center;
+  font-size: 1.5em;
+  margin: 2em;
+}
+
+
 
 /* Sponsors page */
 
@@ -311,7 +373,7 @@ body {
 }
 
 .contact-form {
-  background-image: url("/public/img/Brushoverlay03.png");
+  background-image: url("./../../assets/Brushoverlay03.png");
   background-position: bottom right;
   background-repeat: no-repeat;
   background-size: auto;
@@ -436,9 +498,17 @@ body {
     min-height: 44vh;
   }
 
+  .page-banner {
+    border: none;
+  }
+
   
   .ps-body {
     font-size: 1.5em;
+  }
+
+  .current-event {
+    max-width: 100%;
   }
 
 

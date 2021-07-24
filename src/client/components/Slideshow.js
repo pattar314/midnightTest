@@ -7,7 +7,7 @@ import Card from './Card';
 const Slideshow = (props) => {
 
         let [cardIndex, setCardIndex] = useState(0);
-        let [show, setShow] = useState(false);
+        let [show, setShow] = useState(0);
         
         let cards = props.cards
             .map((card, index) => 
@@ -32,21 +32,21 @@ const Slideshow = (props) => {
         
             
         const handleCarouselButton = (direction) => {
-            setDisplay()
+            
             if(direction === -1){
                 setCardIndex(cardIndex += direction);
                 if(cardIndex < 0 ){
-                    setCardIndex(cards.length -1)
+                    setCardIndex(cards.length)
                 }
             }
             else if(direction === 1){
                 setCardIndex(cardIndex += direction);
-
-                if(cardIndex > cards.length - 1){
-                    setCardIndex(0);
+                if(cardIndex > cards.length - 2 ){
+                    setCardIndex(-1);
                 }
             }
             console.log(cardIndex)
+            setDisplay()
         }
 
         

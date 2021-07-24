@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import HeaderElement from './HeaderElement'
-import mwLogo from '/public/img/mwLogoFix1.png'
+import mwLogo from './../../assets/mwLogoFix1.png'
 import { ArrowDropDown } from '@material-ui/icons'
 
 

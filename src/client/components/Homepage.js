@@ -10,6 +10,17 @@ import {sponsors} from './data';
 
 const Homepage = (props) => {
 
+    let events = eventCards.map((card, key) =>
+                <>
+                    <img className='featured-image-homepage current-event' src={require('./../../assets/' + eventCards[0].src)} />
+                    
+                    <a className='film-freeway-button' href={sponsors[0].link}>
+                        <img className='film-freeway-image' src={require('./../../assets/' + sponsors[0].logo)} alt={sponsors[0].name} />
+                    </a>
+                </>
+            )
+    
+
 
         return (
             <div>
@@ -21,15 +32,7 @@ const Homepage = (props) => {
                 title="EVENTS"
                 />
                 {
-                eventCards ? eventCards.map((card, key) =>
-                <>
-                    <img className='featured-image-homepage current-event' src={require('./../../assets/' + eventCards[0].src)} />
-                    
-                    <a className='film-freeway-button' href={sponsors[0].link}>
-                        <img className='film-freeway-image' src={require('./../../assets/' + sponsors[0].logo)} alt={sponsors[0].name} />
-                    </a>
-                    </>
-                    ) : <PageSubSection 
+                eventCards ?  events[0] : <PageSubSection 
                     body="More events in the works"
                     extraStyles="sectionSubBanner"
                     />

@@ -32,7 +32,7 @@ const Projects = (props) => {
 
            { current ? 
             <div className='upcoming-projects'>
-                <h1>Upcoming Projects</h1>
+                <h1 style={{textAlign: "center"}}>Upcoming Projects</h1>
                 <div className='vertical-card-wrapper'>
                     {currentProject}
                 </div>
