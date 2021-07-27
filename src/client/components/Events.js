@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { projectCards, eventCards } from './data';
+import {  eventCards } from './data';
 import Card from './Card';
 import PageSection from './PageSection';
 import Slideshow from './Slideshow';
@@ -44,7 +44,7 @@ const Events = (props) => {
             <div className='previous-events'>
                <h1>Previous Events</h1>
                <div className='horizontal-card-wrapper'>
-                   <Slideshow cards={projectCards.slice(1,)} wrapperClasses="project-slideshow" />
+                   <Slideshow cards={eventCards.slice(1,)} wrapperClasses="project-slideshow" />
                </div>
             </div>
         </div>
