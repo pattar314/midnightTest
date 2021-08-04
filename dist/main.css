@@ -373,7 +373,7 @@ body {
 }
 
 .contact-form {
-  background-image: url(/dist/fc1ae6141ad6319a0319.png);
+  
   background-position: bottom right;
   background-repeat: no-repeat;
   background-size: auto;
@@ -383,8 +383,8 @@ body {
   flex-direction: column;
   text-align: center;
   padding-bottom: 3em;
-  background-color: #eaeaea;
-  color: black;
+  background-color: #262626;
+  color: white;
   
 }
 

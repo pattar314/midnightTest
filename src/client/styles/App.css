@@ -372,8 +372,7 @@ body {
   margin-top: 3em;
 }
 
-.contact-form {
-  background-image: url("./../../assets/Brushoverlay03.png");
+.contact-form { 
   background-position: bottom right;
   background-repeat: no-repeat;
   background-size: auto;
