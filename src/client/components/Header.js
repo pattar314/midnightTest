@@ -40,7 +40,7 @@ const Header = (props) => {
 
     return (
         <div className="header-container">
-            <a href="/" className="header-logo">
+            <a href="/" className="header-banner">
                 <img src={mwLogo} alt="midnight west logo" className='logo'></img>
             </a>
             <div className='dropdownArrow' onClick={changeVisibility}><ArrowDropDown /></div>

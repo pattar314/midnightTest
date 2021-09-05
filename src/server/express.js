@@ -14,7 +14,7 @@ import webpack from 'webpack'
 import MainRouter from '../client/components/MainRouter.js'
 import webpackConfig from './../../webpack.config.client'
 import WebpackHotMiddleware from 'webpack-hot-middleware'
-
+require('dotenv').config()
 
 
 
@@ -41,6 +41,7 @@ app.use(cors())
 app.use(express.static(path.join(CURRENT_WORKING_DIR, 'public')))
 app.use('/dist', express.static(path.join(CURRENT_WORKING_DIR, 'dist')))
 
+console.log(process.env)
 
 const mockResponse = {
     foo: 'bar',
