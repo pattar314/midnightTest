@@ -23,11 +23,9 @@ body {
 
 .header-container {
   width: 100vw;
-  height: 10em;
   background-color: white;
   display: flex;
   align-content: center;
-  justify-content: center;
 }
 
 .menu-list {
@@ -37,11 +35,13 @@ body {
 }
 
 .header-logo {
-  margin-right: auto;
   background-color: white;
   height: 10em;
 }
 
+.header-banner {
+  margin-right: auto;
+}
 
 .header-logo img {
   height: 10em;

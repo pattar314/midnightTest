@@ -14,6 +14,7 @@ import webpack from 'webpack'
 import MainRouter from '../client/components/MainRouter.js'
 import webpackConfig from './../../webpack.config.client'
 import WebpackHotMiddleware from 'webpack-hot-middleware'
+import UserRouter from './routes/user.routes'
 require('dotenv').config()
 
 
@@ -41,7 +42,7 @@ app.use(cors())
 app.use(express.static(path.join(CURRENT_WORKING_DIR, 'public')))
 app.use('/dist', express.static(path.join(CURRENT_WORKING_DIR, 'dist')))
 
-console.log(process.env)
+app.use(UserRouter)
 
 const mockResponse = {
     foo: 'bar',
@@ -68,6 +69,8 @@ app.get('*', (req, res) => {
         console.log('there was context...   redirecting')
         return res.redirect(303, context.url)
     }
+
+
     res.status(200).send(template({body: body}))
 })
 

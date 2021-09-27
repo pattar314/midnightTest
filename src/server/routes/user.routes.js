@@ -1,9 +1,10 @@
-import express from express
+import express from "express"
 import emailCtl from './../controllers/email.controller'
 
 
 
-const router = express.Router()
+const UserRouter = express.Router()
 
-router.route('/sendcontact').
-    get(emailCtl.sendContactMail)
+UserRouter.route('/sendcontact').post(emailCtl.sendContactMail)
+
+export default  UserRouter 

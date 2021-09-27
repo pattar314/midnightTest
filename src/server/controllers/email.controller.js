@@ -12,16 +12,24 @@ const sendContactMail = (req, res) => {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: process.env[CONTACT_EMAIL],
-            pass: process.env[CONTACT_PASS]
+            user: process.env["CONTACT_EMAIL"],
+            pass: process.env["CONTACT_PASS"]
         }
     });
 
     let mailOptions = {}
-    mailOptions.from = req.body[from];
-    mailOptions.to = process.env[CONTACT_EMAIL];
-    mailOptions.subject = `New contact for Midnight West from ${req.body[firstName]} ${req.body[lastName]}`;
-    mailOptions.text = req.body[message];
+    mailOptions.from = req.body["from"];
+    mailOptions.to = "Josh.saxon@midnightwestproductions.com";
+    mailOptions.subject = `New contact for Midnight West from ${req.body["firstName"]} ${req.body["lastName"]}`;
+    mailOptions.text = `
+     Name: ${req.body["firstName"]} ${req.body["lastName"]}
+     Email: ${req.body["email"]}
+
+     Message: ${req.body["message"]}`;
+
+
+
+    console.log('mailOptions: ', mailOptions)
 
     transporter.sendMail(mailOptions, (error, info) => 
     {
