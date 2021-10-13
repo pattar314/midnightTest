@@ -22,7 +22,7 @@ require('dotenv').config()
 const compiler = webpack( webpackConfig )
 
 const app = express()
-const port = proccess.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 const CURRENT_WORKING_DIR = process.cwd()
 
 
