@@ -22,7 +22,7 @@ require('dotenv').config()
 const compiler = webpack( webpackConfig )
 
 const app = express()
-const port = 3000;
+const port = proccess.env.PORT || 3000;
 const CURRENT_WORKING_DIR = process.cwd()
 
 
@@ -96,6 +96,7 @@ app.listen(port, (err) => {
     if(err) {
         console.log(err);
     }
+
     console.info('Server started on port %s', port);
 })
 
