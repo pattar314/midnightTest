@@ -1,7 +1,7 @@
 {
   "name": "midnight-test",
   "version": "1.0.0",
-  "homepage": "www.cognitivefunctions.net",
+  "homepage": "cognitivefunctions.net",
   "main": "./dist/server.generated.js",
   "license": "MIT",
   "dependencies": {
