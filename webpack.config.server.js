@@ -4,6 +4,7 @@ const CURRENT_WORKING_DIR = process.cwd();
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const HtmlWebPackPlugin = require("html-webpack-plugin")
 
 
 const stylesHandler = MiniCssExtractPlugin.loader;
@@ -26,7 +27,8 @@ const config = {
       new webpack.HotModuleReplacementPlugin(),
       new MiniCssExtractPlugin(),
       new webpack.NoEmitOnErrorsPlugin(),
-      new ReactRefreshWebpackPlugin()
+      new ReactRefreshWebpackPlugin(),
+      new HtmlWebPackPlugin()
   ],
     module: {
     rules: [

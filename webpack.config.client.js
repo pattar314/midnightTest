@@ -1,6 +1,7 @@
-const path = require("path")
-const webpack = require('webpack')
-const CURRENT_WORKING_DIR = process.cwd()
+const path = require("path");
+const webpack = require('webpack');
+const CURRENT_WORKING_DIR = process.cwd();
+const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
@@ -22,7 +23,8 @@ const config = {
       new webpack.HotModuleReplacementPlugin(),
       new MiniCssExtractPlugin(),
       new webpack.NoEmitOnErrorsPlugin(),
-      new ReactRefreshWebpackPlugin()
+      new ReactRefreshWebpackPlugin(),
+      new HtmlWebPackPlugin()
     ],
     module: {
         rules: [ 
