@@ -10,7 +10,7 @@ export default ({body}) => {
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
             <title>Midnight test</title>
-            <link href="/dist/main.css" rel="stylesheet">
+            <link href="/dist/main.css" type="text/css" rel="stylesheet">
             
         </head>
         <body>
