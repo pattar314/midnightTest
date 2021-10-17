@@ -4,6 +4,7 @@
   "homepage": "cognitivefunctions.net",
   "main": "./dist/index.html",
   "license": "MIT",
+  "proxy": "cognitivefunctions.net",
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
