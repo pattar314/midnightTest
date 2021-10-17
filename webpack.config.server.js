@@ -28,10 +28,14 @@ const config = {
       new MiniCssExtractPlugin(),
       new webpack.NoEmitOnErrorsPlugin(),
       new ReactRefreshWebpackPlugin(),
-      new HtmlWebPackPlugin()
+      new HtmlWebPackPlugin({ template: './webpack-template.html'})
   ],
     module: {
     rules: [
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
+      },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
