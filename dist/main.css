@@ -452,8 +452,9 @@ body {
   }
 
   
-  .header-logo {
-    margin: auto;
+  .header-banner {
+    justify-content: center;
+    display: flex;
   }
 
   

@@ -28,11 +28,11 @@ const MainRouter = () => {
     <Header headerData={state.headerComponents} />
     <Switch>
         <Route exact path='/' component={Homepage} />
-        <Route path='/events' component={Events} />
-        <Route path='/projects' component={Projects} />
-        <Route path='/services' component={Services} />
-        <Route path='/sponsors' component={Sponsors} />
-        <Route path='/contact' component={ContactPage} />
+        <Route exact path='/events' component={Events} />
+        <Route exact path='/projects' component={Projects} />
+        <Route exact path='/services' component={Services} />
+        <Route exact path='/sponsors' component={Sponsors} />
+        <Route exact path='/contact' component={ContactPage} />
     </Switch>
     <Footer
         facebook={state.facebook}
