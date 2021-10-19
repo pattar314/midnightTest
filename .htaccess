@@ -9,6 +9,7 @@ PassengerStartupFile dist/server.generated.js
 <IfModule Litespeed>
 </IfModule>
 # DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION END
+AddType text/css .css
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /

@@ -39,10 +39,6 @@ body {
   height: 10em;
 }
 
-.header-banner {
-  margin-right: auto;
-}
-
 .header-logo img {
   height: 10em;
   margin: auto;
@@ -546,7 +542,13 @@ body {
 }
 
 @media only screen and ( min-device-width: 800px) {
+
   .menu-list {
     display: flex;
   };
+
+  .header-banner {
+    margin-right: auto;
+  }
+  
 }
