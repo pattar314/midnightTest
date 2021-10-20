@@ -451,6 +451,7 @@ body {
   .header-banner {
     justify-content: center;
     display: flex;
+    margin: auto;
   }
 
   
