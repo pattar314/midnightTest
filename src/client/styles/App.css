@@ -506,6 +506,19 @@ body {
     max-width: 100%;
   }
 
+  /* Mobile services */
+
+  .services-content {
+    flex-direction: column;
+  }
+
+  .service-pricing {
+    height: auto;
+  }
+
+  .services-content {
+    font-size: 1em;
+  }
 
   /* Mobile Slideshow */
 
