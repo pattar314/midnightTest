@@ -1,14 +1,3 @@
-# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
-PassengerAppRoot "/home/cognmrnj/repositories/midnighttest"
-PassengerBaseURI "/"
-PassengerNodejs "/home/cognmrnj/nodevenv/repositories/midnighttest/14/bin/node"
-PassengerAppType node
-PassengerStartupFile dist/server.generated.js
-# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
-# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION BEGIN
-<IfModule Litespeed>
-</IfModule>
-# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION END
 AddType text/css .css
 <IfModule mod_rewrite.c>
 RewriteEngine On
@@ -19,3 +8,16 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-l
 RewriteRule . /index.html [L]
 </IfModule>
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/cognmrnj/public_html/dist"
+PassengerBaseURI "/"
+PassengerNodejs "/home/cognmrnj/nodevenv/public_html/dist/14/bin/node"
+PassengerAppType node
+PassengerStartupFile server.generated.js
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
+# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION BEGIN
+<IfModule Litespeed>
+SetEnv CONTACT_EMAIL cognitivecontactform@gmail.com
+SetEnv CONTACT_PASS greensage420
+</IfModule>
+# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION END
