@@ -30,8 +30,6 @@ body {
 
 .menu-list {
   display: flex;
-  align-content: center;
-  justify-content: center;
 }
 
 .header-logo {
