@@ -159,7 +159,7 @@ body {
   color: white;
   border: none;
   background-color: #191919;
-  height: 5em;
+  height: 10em;
   margin: auto;
 }
 
@@ -542,10 +542,13 @@ body {
 
 }
 
+/* desktop only */
+
 @media only screen and ( min-device-width: 800px) {
 
   .menu-list {
     display: flex;
+    margin-left: auto;
   };
 
   .header-banner {

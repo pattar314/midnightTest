@@ -5,10 +5,10 @@ const SocialBar = (props) => {
     return (
             
         <div className='social-wrapper'>
-            <a href={props.facebook["link"]} target="_blank" className='social-icon'><Facebook /></a>
-            <a href={props.youtube["link"]} target="_blank" className='social-icon'><YouTube /></a>
-            <a href={props.instagram["link"]} target="_blank" className='social-icon'><Instagram /></a>
-            <a href={props.rss} target="_blank" className='social-icon'><RssFeed /></a>
+            <a href={props.facebook["link"]} target="_blank" className='social-icon' onclick="window.open(this.href,'_blank');return false;" ><Facebook /></a>
+            <a href={props.youtube["link"]} target="_blank" className='social-icon' onclick="window.open(this.href,'_blank');return false;" ><YouTube /></a>
+            <a href={props.instagram["link"]} target="_blank" className='social-icon' onclick="window.open(this.href,'_blank');return false;" ><Instagram /></a>
+            <a href={props.rss} target="_blank" className='social-icon' onclick="window.open(this.href,'_blank');return false;" ><RssFeed /></a>
         </div>
             
     )
