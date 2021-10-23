@@ -58,9 +58,7 @@ app.get('*', (req, res) => {
     console.log('request url: ', req.url)
     const context = {}
     const body = ReactDOMServer.renderToString(
-        <StaticRouter location={req.url} context={context}>
-            <MainRouter />
-        </StaticRouter>
+        path.join(process.cwd(), '/dist/index.html')
         )
 
 
