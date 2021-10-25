@@ -7,6 +7,9 @@ import MainRouter from './components/MainRouter.js';
 const App = () => {
 
   React.useEffect(() => {
+
+  
+
     try{
       const toRem = document.querySelector('#toRemove')
       if (toRem){
