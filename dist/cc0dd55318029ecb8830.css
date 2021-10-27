@@ -1,9 +1,0 @@
-// extracted by mini-css-extract-plugin
-export {};
-    if(module.hot) {
-      // 1634807443622
-      var cssReload = require("!../node_modules/css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
-      module.hot.dispose(cssReload);
-      module.hot.accept(undefined, cssReload);;
-    }
-  

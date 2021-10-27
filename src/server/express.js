@@ -15,7 +15,7 @@ import MainRouter from '../client/components/MainRouter.js'
 import webpackConfig from './../../webpack.config.client'
 import WebpackHotMiddleware from 'webpack-hot-middleware'
 import UserRouter from './routes/user.routes'
-require('dotenv').config()
+// require('dotenv').config()
 
 
 
@@ -54,40 +54,27 @@ app.get('/api', (req, res) => {
     res.send(mockResponse)
 })
 
-app.get('*', (req, res) => {
+app.get('/*', (req, res) => {
     console.log('request url: ', req.url)
-    const context = {}
-    const body = ReactDOMServer.renderToString(
-        path.join(process.cwd(), '/dist/index.html')
-        )
+    let indexPage = CURRENT_WORKING_DIR + '/dist/index.html';
 
 
-
-    if (context.url) {
-        console.log('there was context...   redirecting')
-        return res.redirect(303, context.url)
-    }
-
-
-    res.status(200).send(template({body: body}))
+    res.status(200).sendFile(indexPage, (err) => { 
+        if(err){
+            console.log('There was an error: ', err)
+        }
+    })
 })
 
 app.use((err, req, res, next) => {
     if (err.name === 'UnauthorizedError') {
-      res.status(401).json({"error" : err.name + ": " + err.message})
+      console.log("error" + err.name + ": " + err.message)
     }else if (err) {
-      res.status(400).json({"error" : err.name + ": " + err.message})
+      console.log("error" + err.name + ": " + err.message)
       console.log(err)
     }
   })
   
-
-
-app.get('/', (req, res) => {
-    console.log('test 2')
-    res.status(200).send(template())
-})
-
 
 
 app.listen(port, (err) => {

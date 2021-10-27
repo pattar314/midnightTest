@@ -1,5 +1,5 @@
 
-export default ({body}) => {
+export default () => {
     return `<!DOCTYPE html>
         <html lang="en">
         <head>
@@ -14,7 +14,7 @@ export default ({body}) => {
             
         </head>
         <body>
-            <div id='root'>${body}</div>
+            <div id='root'></div>
             <div id='toRemove'> </div>
             <script defer type"text/javascript" src="/dist/bundle.js"></script>
         </body>
