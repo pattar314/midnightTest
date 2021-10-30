@@ -433,10 +433,18 @@ body {
   height: 3em;
 }
 
+/* tablet styles */
+
+@media screen and ( min-device-width: 850px){
+  .header-element  a {
+    font-size: 1.2em;
+  }
+}
+
 
 /* cell phone styles */
 
-@media only screen and ( max-device-width: 800px) {
+@media only screen and ( max-device-width: 850px) {
 
   /* Mobile Header */
 
@@ -475,6 +483,7 @@ body {
   .menu-list {
     display: none;
     flex-direction: column;
+    margin: auto;
   }
 
 
