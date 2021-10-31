@@ -26,18 +26,18 @@ const Slideshow = (props) => {
         }, [])
 
         let setDisplay = () => {
-            window.matchMedia("(max-width: 500px)").matches ? setShow(<div className='slide-cards'>{cards[cardIndex]}</div>): setShow(<div className='slide-cards'>{cards[cardIndex]} {cards[cardIndex+1]}</div>)
+            window.matchMedia("(max-width: 800px)").matches ? setShow(<div className='slide-cards'>{cards[cardIndex]}</div>): setShow(<div className='slide-cards'>{cards[cardIndex]} {cards[cardIndex+1]}</div>)
         }
 
         
             
         const handleCarouselButton = (direction) => {
             
-            if(direction === -1){
-                setCardIndex(cardIndex += direction);
-                if(cardIndex < 0 ){
+          /*   if(direction === -1){
+                if(cardIndex <= 0 ){
                     setCardIndex(cards.length)
                 }
+                setCardIndex(cardIndex += direction);
             }
             else if(direction === 1){
                 setCardIndex(cardIndex += direction);
@@ -45,6 +45,15 @@ const Slideshow = (props) => {
                     setCardIndex(-1);
                 }
             }
+ */
+
+            setCardIndex(cardIndex += direction)
+            if(cardIndex < 0 ){
+                setCardIndex(cards.length -1)
+            } else if(cardIndex > cards.length - 2 ){
+                setCardIndex(0);
+            }
+
             console.log(cardIndex)
             setDisplay()
         }
