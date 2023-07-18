@@ -23,3 +23,5 @@ const eventModel = mongoose.Schema({
   url: String,
   
 })
+
+module.exports = mongoose.model('Event', eventModel)
