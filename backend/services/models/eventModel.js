@@ -4,10 +4,12 @@ const { mongoose } = require("mongoose");
 const eventModel = mongoose.Schema({
   name: {
     type: String,
-    required: true
+    required: true,
+    unique: true
   },
   date: {
-    type: String,
+    type: Date,
+    default: Date.now(),
     required: true
   },
   description: {
@@ -21,7 +23,10 @@ const eventModel = mongoose.Schema({
     data: [Buffer]
   },
   url: String,
-  
+  featuredPriority: {
+    type: Number,
+    default: 0
+  }
 })
 
 module.exports = mongoose.model('Event', eventModel)

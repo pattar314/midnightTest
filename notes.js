@@ -1,1 +1,0 @@
-// TODO adjust slideshow to look better on ipad

@@ -1,0 +1,29 @@
+
+
+$theme-dark: #262626;
+$theme-light: #3a3a3a;
+$theme-font: #d1d1d1;
+
+
+
+.footer-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.footer-content {
+  width: fit-content;
+}
+.footer-icon-wrapper {
+  text-decoration: none;
+}
+
+.footer-icon {
+  border: solid orange 1px;
+  border-radius: 50%;
+  padding: .5em;
+  margin: .2em;
+  font-size: 2em;
+  color: $theme-font;
+}

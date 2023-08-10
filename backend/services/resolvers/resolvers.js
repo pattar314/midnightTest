@@ -23,7 +23,7 @@ const getSingleContact = async ({contactId}) => {
 const updateContact = async ({contactID, updateData}) => {
   const contactToUpdate = await Contact.findById(contactID)
   console.log('contactToUpdate in resolvers: ', contactToUpdate)
-  contactToUpdate = {contactToUpdate, ...updateData}
+  contactToUpdate = {...contactToUpdate, ...updateData}
   console.log('updated contact: ', updatedContact)
   const savedUpdate = await contactToUpdate.save()
   console.log('savedUpdate: ', savedUpdate)
@@ -50,24 +50,27 @@ const getAllEvents = async () => {
   return allEvents
 }
 
-const getSingleEvent = async ({eventID}) => {
+const getSingleEvent = async (eventID) => {
+  console.log('test: ', eventID)
   const singleEvent = await Event.findById(eventID)
   console.log('singleEvent in resolvers: ', singleEvent)
   return singleEvent
 }
 
 const updateEvent = async ({eventID, updateData}) => {
+  console.log(`eventId: ${eventID}, updateData: ${updateData}`)
   const eventToUpdate = await Event.findByIdAndUpdate(eventID, updateData)
   console.log('eventToUpdate in resolvers: ', eventToUpdate)
   return eventToUpdate
 }
 
-const deleteEvent = async ({eventID}) => {
-  const eventToDelete = await Event.findByIdAndDelete(eventID)
+const deleteEvent = async ({deleteId}) => {
+  console.log('delete id: ', deleteId)
+  const eventToDelete = await Event.findByIdAndDelete(deleteId)
   console.log('eventToDelete in resolvers: ', eventToDelete) 
   return eventToDelete
 }
 
-
+//64bfb7102be4cada4bd2359f
 
 module.exports = { createContact, getAllContacts, getSingleContact, updateContact, deleteContact, createEvent, getAllEvents, getSingleEvent, updateEvent, deleteEvent }

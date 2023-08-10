@@ -1,0 +1,19 @@
+label, input {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 1em 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  color: #d1d1d1;
+  max-width: 20em;
+  margin: auto;
+  padding: 5em;
+}
+
+/*# sourceMappingURL=contactStyles.css.map */

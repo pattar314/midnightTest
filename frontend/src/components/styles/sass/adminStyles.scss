@@ -1,0 +1,47 @@
+
+// global screen styles {
+
+    $theme-dark: #262626;
+    $theme-light: #3a3a3a;
+    $theme-font: #d1d1d1;
+  
+
+
+.admin-panel-wrapper {
+    display: flex;
+    max-width: 75%;
+    background-color: aquamarine;
+    align-self: center;
+    justify-self: center;
+}
+
+
+// will include tabbing area
+.admin-panel {
+    background-color: $theme-light;
+}
+
+.event-admin-panel {
+    flex: 1;
+}
+
+// }
+
+
+// mobile screens
+@media (max-width: 550px){
+
+
+}
+
+// medium screens
+@media ((max-width: 992px) and (min-width: 551px)){
+
+
+}
+
+// large screens
+@media (min-width: 993px){
+
+
+}
