@@ -8,8 +8,7 @@ const eventModel = mongoose.Schema({
     unique: true
   },
   date: {
-    type: Date,
-    default: Date.now(),
+    type: String,
     required: true
   },
   description: {

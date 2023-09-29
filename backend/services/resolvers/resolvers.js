@@ -8,17 +8,20 @@ const createContact = ({contactInfo}) => {
     return newContact
 }
 
-const getAllContacts = async () => {
-  const allContacts = await Contact.find({})
-  console.log('all contacts from resolvers: ', allContacts)
-  return allContacts
-}
-
-const getSingleContact = async ({contactId}) => {
+const getContacts = async ({id}) => {
+  if(id){
   const foundContact = await Contact.findById(contactId).data
   console.log('get single contact resolver: ', foundContact)
   return foundContact
+  } else {
+    const allContacts = await Contact.find({})
+    console.log('all contacts from resolvers: ', allContacts)
+    return allContacts
+  }
+
 }
+
+
 
 const updateContact = async ({contactID, updateData}) => {
   const contactToUpdate = await Contact.findById(contactID)
@@ -71,6 +74,16 @@ const deleteEvent = async ({deleteId}) => {
   return eventToDelete
 }
 
-//64bfb7102be4cada4bd2359f
+//service 
+/* servicecreate
+servicereadOne
+servicereadAll
+serviceUpdate
+serviceDelete */
 
-module.exports = { createContact, getAllContacts, getSingleContact, updateContact, deleteContact, createEvent, getAllEvents, getSingleEvent, updateEvent, deleteEvent }
+//projects
+
+
+// sponsors
+
+module.exports = { createContact, getContacts, updateContact, deleteContact, createEvent, getAllEvents, getSingleEvent, updateEvent, deleteEvent }

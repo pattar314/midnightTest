@@ -13,7 +13,7 @@ mainRouter.get('/events', async (req, res) => {
     res.status(200).send(fetchedEvent)
   } else {
       const allEvents = await getAllEvents()
-    res.status(200).send(allEvents)
+      res.status(200).send(allEvents)
   }
 })
 

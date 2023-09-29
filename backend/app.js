@@ -25,9 +25,9 @@ mongoose.connect(process.env.MONGODB_URI).then(() => {
  app.use(express.json())
 
 app.use(loggerMiddleware)
-app.use('/auth', authRouter)
-app.use('/contact', contactRouter)
-app.use('/', mainRouter)
+app.use('/api/auth', authRouter)
+app.use('/api/contact', contactRouter)
+app.use('/api', mainRouter)
 
 
 http.Server(app).listen(3001)

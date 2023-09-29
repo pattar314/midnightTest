@@ -10,4 +10,9 @@
 
 .content-area {
   min-height: 50vh;
+  max-width: 99vw;
+}
+
+.app-content-area-wrapper {
+  color: #d1d1d1;;
 }

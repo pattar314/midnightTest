@@ -1,0 +1,45 @@
+/* global */
+
+.carousel-wrapper {
+  max-width: 90%;
+  min-width: 80%;
+  margin: auto;
+}
+
+.carousel-card-wrapper {
+  max-width: 30%;
+  margin: auto;
+}
+  
+.carousel-card-image {
+    max-width: 100%;
+}
+
+
+/* mobile */
+@media (max-width: 767px) {
+  .carousel-wrapper {
+    display: flex;
+    max-width: 90%;
+    max-height: 20%;
+    background-color: #fffcfc;
+    overflow: hidden;
+  }
+  .carousel-card-wrapper {
+    max-width: 70%;
+  }
+}
+
+/* desktop */
+@media (min-width: 993px) {
+  .carousel-wrapper {
+    display: flex;
+    flex-direction: row;
+    max-width: 75%;
+  }
+  .carousel-card-wrapper {
+    max-width: 25%;
+  }
+}
+
+/*# sourceMappingURL=carouselStyles.css.map */

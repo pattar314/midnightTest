@@ -1,0 +1,45 @@
+
+
+/* global */
+
+$theme-dark: #262626;
+$theme-light: #3a3a3a;
+$theme-font: #d1d1d1;
+
+/* mobile */
+
+@media (max-width: 767px){
+  .carousel-wrapper {
+    display: flex;
+    max-width: 90%;
+    max-height: 20%;
+    background-color: #fffcfc;
+    overflow: hidden;
+  }
+
+  .carousel-card-wrapper {
+    max-width: 70%;
+  }
+
+  .carousel-card-image {
+    max-width: 100%;
+  }
+}
+
+@media  (min-width: 768px) and (max-width: 992px) {
+
+}
+/* desktop */
+
+@media (min-width: 993px) {
+  .carousel-wrapper {
+    display: flex;
+    flex-direction: row;
+    max-width: 75%;
+  }
+
+  .carousel-card-wrapper {
+    max-width: 25%;
+  }
+}
+
